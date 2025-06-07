@@ -2,6 +2,9 @@
 
 $wlabarron_saml_yourls_base_url = "https://sho.rt/";
 
+// If set to true the user must exist in admin user variable, otherwise all users are allowed
+$wlabarron_saml_check_admin = false;
+
 $wlabarron_saml_settings = array (
     // If 'strict' is True, then the PHP Toolkit will reject unsigned
     // or unencrypted messages if it expects them signed or encrypted

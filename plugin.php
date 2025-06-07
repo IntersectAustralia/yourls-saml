@@ -63,7 +63,10 @@ function wlabarron_saml_admin_links($links) {
 // Check if the currently logged in user is defined in the config file.
 function wlabarron_saml_is_user_in_config() {
     global $yourls_user_passwords;
+    global $wlabarron_saml_check_admin;
     $users = array_keys($yourls_user_passwords);
-    
-    return in_array(YOURLS_USER, $users);
+    if ($wlabarron_saml_check_admin)
+        return in_array(YOURLS_USER, $users);
+    else
+        return true;
 }
